@@ -1,0 +1,99 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #3498db, #e74c3c, #2ecc71, #f39c12);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s infinite;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Optional: Add styles for better radio button and checkbox appearance */
+
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Optional: Style radio and checkbox labels for better appearance */
+
+label[for="male"], label[for="female"] {
+    margin-right: 15px;
+}
+
+/* Optional: Add media query for responsive design */
+
+@media (max-width: 768px) {
+    form {
+        max-width: 100%;
+    }
+}
+/* Add a basic style for the falling stars */
+.star {
+    position: fixed;
+    width: 2px;
+    height: 2px;
+    background-color: #fff;
+    opacity: 0.8;
+    animation: fall 5s linear;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(calc(100vh - 2px));
+    }
+}
+.name-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
